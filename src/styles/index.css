@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #C84B11;
+  --primary-light: #E8722A;
+  --primary-dark: #9A3608;
+  --accent: #D4A853;
+  --accent-light: #E8C97A;
+  --bg-dark: #1A0A04;
+  --bg-medium: #2A1008;
+  --bg-card: #221005;
+  --bg-card-hover: #2E1509;
+  --foreground: #FAF0E6;
+  --foreground-muted: #C8B49A;
+  --foreground-subtle: #8A7060;
+  --border: rgba(200, 75, 17, 0.2);
+  --border-light: rgba(250, 240, 230, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+/* Spotlight card effect */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(232, 114, 42, 0.35),
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes animationIn {
+  0% { opacity: 0; transform: translateY(24px); filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes beamDrop {
+  0% { top: -150px; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 0.7; }
+  100% { top: 110%; opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(200, 75, 17, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(200, 75, 17, 0.6); }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  30% { transform: translate(1%, -2%); }
+  50% { transform: translate(-2%, 1%); }
+  70% { transform: translate(2%, 2%); }
+  90% { transform: translate(-1%, 2%); }
+}
+
+.animate-in {
+  animation: animationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.beam {
+  position: absolute;
+  width: 1px;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent, rgba(232, 114, 42, 0.6), transparent);
+  animation: beamDrop 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.beam-delay-1 { animation-delay: 3s; }
+.beam-delay-2 { animation-delay: 6s; }
+.beam-delay-3 { animation-delay: 1.5s; }
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* Grain texture overlay */
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  animation: grain 8s steps(10) infinite;
+}
+
+/* Scroll animation classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Product card hover */
+.product-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(200, 75, 17, 0.2);
+}
+
+/* Filter button active */
+.filter-btn {
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  box-shadow: 0 4px 20px rgba(200, 75, 17, 0.4);
+}
+
+/* Ornamental divider */
+.ornament-divider {
+  background: linear-gradient(to right, transparent, rgba(212, 168, 83, 0.4), transparent);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  background: rgba(26, 10, 4, 0.85);
+}
+
+/* Nav blur */
+.nav-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 10, 4, 0.92) 0%,
+    rgba(42, 16, 8, 0.75) 40%,
+    rgba(154, 54, 8, 0.45) 70%,
+    rgba(200, 75, 17, 0.2) 100%
+  );
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--primary-light), var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section gradient bg */
+.section-warm {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-medium) 50%, var(--bg-dark) 100%);
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 0 0 1px rgba(200, 75, 17, 0.3), 0 20px 60px rgba(200, 75, 17, 0.15);
+}
+
+/* Mongolian ornament pattern */
+.mongolian-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(212, 168, 83, 0.03) 0px,
+    rgba(212, 168, 83, 0.03) 1px,
+    transparent 1px,
+    transparent 10px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(212, 168, 83, 0.03) 0px,
+    rgba(212, 168, 83, 0.03) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+/* Badge styles */
+.badge-featured {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+}
+.badge-popular {
+  background: linear-gradient(135deg, #7C3AED, #A855F7);
+}
+.badge-business {
+  background: linear-gradient(135deg, #065F46, #059669);
+}
+.badge-family {
+  background: linear-gradient(135deg, #92400E, #D97706);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+}
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+.mobile-menu.closed {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Line clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Hero slideshow progress bar ─────────────────────────────────────── */
+@keyframes slideProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.slide-progress-bar {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: 9999px;
+  background: var(--accent, #D4A853);
+  animation: slideProgress linear both;
+}
+
+/* ─── Hero gradient overlay (warm, directional) ────────────────────────── */
+.hero-gradient {
+  background: linear-gradient(
+    160deg,
+    rgba(26,10,4,0.55) 0%,
+    rgba(154,54,8,0.18) 55%,
+    rgba(26,10,4,0.08) 100%
+  );
+}
+/* ─── Partner marquee animation ───────────────────────────────────────── */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.partner-marquee {
+  animation: marqueeScroll 76s linear infinite;
+}
+
+.partner-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Partner logo hover: subtle brighten */
+.partner-item:hover .partner-logo {
+  filter: grayscale(0.3) brightness(0.85) !important;
+}
+.partner-item:hover .partner-text-fallback {
+  color: rgba(200,180,155,0.75) !important;
+}

@@ -38,7 +38,7 @@ export default function SocialSection() {
         <div className="scroll-reveal mb-10">
           <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent mb-6">
             <span className="w-6 h-px bg-accent" />
-            Нийгмийн сүлжээ
+            Сошиал хаяг
             <span className="w-6 h-px bg-accent" />
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream leading-tight mb-5">
@@ -46,7 +46,7 @@ export default function SocialSection() {
           </h2>
           <p className="text-cream-muted text-[16px] leading-relaxed max-w-2xl mx-auto">
             Шинэ бүтээгдэхүүн, компанийн мэдээ болон сонирхолтой контентыг хамгийн түрүүнд
-            авахыг хүсвэл манай нийгмийн сүлжээний хуудсыг дагаарай.
+            авахыг хүсвэл манай сошиал хуудсыг дагаарай.
           </p>
         </div>
 

@@ -103,7 +103,7 @@ export default function TrustSection() {
               <span className="w-6 h-px bg-accent" />
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-cream leading-tight mb-4">
-              Яагаад <span className="text-gradient">Ачмаг Наран</span> гэж?
+              Яагаад <span className="text-gradient">АЧМАГ НАРАН</span> гэж?
             </h2>
             <p className="text-cream-muted text-[15px] max-w-xl mx-auto leading-[1.85]" style={{ textAlign: 'justify' }}>
               Арван жилийн тасралтгүй туршлага, дэвшилтэт технологи, олон улсын найдвартай

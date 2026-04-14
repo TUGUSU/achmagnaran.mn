@@ -385,17 +385,17 @@ export default function ProductsSection() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div key={activeKey} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {visible.map((product, i) => {
                 const cardRef = React.createRef<HTMLDivElement>();
                 return (
                   <div
                     key={product.id}
                     ref={cardRef}
-                    className="product-card spotlight-card bg-warm-card rounded-sm border overflow-hidden card-glow scroll-reveal"
+                    className="product-card spotlight-card bg-warm-card rounded-sm border overflow-hidden card-glow product-card-enter"
                     style={{
                       borderColor: 'rgba(200,75,17,0.15)',
-                      transitionDelay: `${(i % 4) * 0.07}s`,
+                      animationDelay: `${(i % 8) * 0.05}s`,
                       '--mouse-x': '50%',
                       '--mouse-y': '50%',
                     } as React.CSSProperties}

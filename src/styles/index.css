@@ -318,17 +318,17 @@ body {
 }
 
 .partner-marquee {
+  /* pointer-events:none on the track means hover/click can never pause it */
   animation: marqueeScroll 76s linear infinite;
+  will-change: transform;
 }
 
-.partner-marquee:hover {
-  animation-play-state: paused;
+/* ─── Product card enter animation (replaces scroll-reveal on filtered cards) */
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Partner logo hover: subtle brighten */
-.partner-item:hover .partner-logo {
-  filter: grayscale(0.3) brightness(0.85) !important;
-}
-.partner-item:hover .partner-text-fallback {
-  color: rgba(200,180,155,0.75) !important;
+.product-card-enter {
+  animation: cardEnter 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

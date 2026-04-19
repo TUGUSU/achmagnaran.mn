@@ -25,7 +25,7 @@ const philosophy = [
 ];
 
 const stats = [
-  { value: '10+', label: 'Жилийн туршлага' },
+  { value: '12', label: 'Жилийн туршлага' },
   { value: '30+', label: 'Мэргэшсэн ажилтан' },
   { value: '2', label: 'Өөрийн салбар дэлгүүр' },
   { value: '300+', label: 'Гэрээт хамтрагч цэг' },

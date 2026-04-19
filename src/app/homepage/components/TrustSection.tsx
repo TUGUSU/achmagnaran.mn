@@ -226,7 +226,7 @@ export default function TrustSection() {
                   className="absolute -top-5 -right-5 p-5 rounded-sm animate-pulse-glow"
                   style={{ backgroundColor: '#C84B11', border: '2px solid rgba(212,168,83,0.35)' }}
                 >
-                  <div className="font-display text-2xl font-bold text-white text-center">500 м²</div>
+                  <div className="font-display text-2xl font-bold text-white text-center">400 м²</div>
                   <div className="text-[11px] text-white/75 text-center mt-0.5">Үйлдвэрийн байр</div>
                 </div>
 

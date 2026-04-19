@@ -358,7 +358,7 @@ export default function ContactSection() {
                   </button>
 
                   <p className="text-[11px] text-cream-subtle/60 text-center">
-                    Таны мэдээлэл нууцлагдана. Ажлын 1–2 өдрийн дотор хариу өгнө.
+                    Таны мэдээлэл нууцалж бид таньд ажлын 1–2 өдрийн дотор хариу өгөх болно.
                   </p>
                 </form>
               )}

@@ -13,11 +13,11 @@ const partners = [
   { name: 'Нордлайн ХХК',               logo: 'nordline' },
   { name: 'Алтан Жолоо Трейд',          logo: 'altanjoloot' },
   { name: 'Моннидер ХХК',               logo: 'monnider' },
-  { name: 'Хархорин худалдааны төв',    logo: 'kharkhorin' },
-  { name: 'Дүнжингарав худалдааны төв', logo: 'dunjingarav' },
+  { name: 'Хархорин худалдааны төв',    logo: null },
+  { name: 'Дүнжингарав худалдааны төв', logo: null },
   { name: 'Баялаг Ундраа',              logo: 'bayalag-undraa' },
-  { name: 'Нарантуул худалдааны төв',   logo: 'narantuul' },
-  { name: 'Хүчит Шонхор',               logo: 'khuchit-shonkhor' },
+  { name: 'Нарантуул худалдааны төв',   logo: null },
+  { name: 'Хүчит Шонхор',               logo: null },
 ];
 
 const tripled = [...partners, ...partners, ...partners];
@@ -27,7 +27,7 @@ export default function PartnersSection() {
   const [hoveredKey, setHoveredKey] = useState<string | null>(null);
   const [brokenLogos, setBrokenLogos] = useState<Record<string, boolean>>({});
 
-  const getKey = (name: string, logo?: string) => `${logo || 'no-logo'}-${name}`;
+  const getKey = (name: string, logo?: string | null) => `${logo || 'no-logo'}-${name}`;
 
   return (
     <section

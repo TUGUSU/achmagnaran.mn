@@ -45,7 +45,7 @@ export default function SocialSection() {
             Биднийг <span className="text-gradient">дагаарай</span>
           </h2>
           <p className="text-cream-muted text-[16px] leading-relaxed max-w-2xl mx-auto">
-            Шинэ бүтээгдэхүүн, компанийн мэдээ болон сонирхолтой контентыг хамгийн түрүүнд
+            Шинэ бүтээгдэхүүн ,компанийн мэдээ мэдээлэл болон сонирхолтой контентыг хамгийн түрүүнд
             авахыг хүсвэл манай сошиал хуудсыг дагаарай.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function SocialSection() {
         {/* Microcopy */}
         <p className="text-cream-subtle text-[13px] mt-8 scroll-reveal" style={{ transitionDelay: '0.25s' }}>
           Шинэ бүтээгдэхүүн гарах үед хамгийн түрүүнд мэдэхийг хүсвэл дагаарай.
-          Мэдээ, мэдээлэл болон тусгай санал хүргэдэг.
+          Мэдээ, мэдээлэл болон тусгай үнийн саналыг мэдэхийг хүсвэл бидэнтэй яаралтай холбогдоно уу?.
         </p>
       </div>
     </section>

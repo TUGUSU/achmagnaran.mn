@@ -63,8 +63,8 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[11px] font-semibold tracking-widest text-cream-muted uppercase">Холбоо барих</h4>
-            <a href="tel:75050506" className="text-[13px] text-cream-subtle hover:text-cream transition-colors">7505-0506, 99047488</a>
-            <a href="mailto:officer@achmagnaran.mn" className="text-[13px] text-cream-subtle hover:text-cream transition-colors">officer@achmagnaran.mn</a>
+            <a href="tel:75050506" className="text-[13px] text-cream-subtle hover:text-cream transition-colors">7505-0506, 9907-3583</a>
+            <a href="mailto:officer@achmagnaran.mn" className="text-[13px] text-cream-subtle hover:text-cream transition-colors">achmagnaran@gmail.com</a>
             <p className="text-[13px] text-cream-subtle max-w-[200px] leading-relaxed">СХД, 11-р хороо, АОС 3-32Б</p>
           </div>
         </div>

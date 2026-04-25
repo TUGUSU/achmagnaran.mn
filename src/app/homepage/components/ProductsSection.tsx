@@ -36,7 +36,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 1,
     name: 'Франкфуртер шардаг зайдас',
-    price: '14,000₮',
+    price: '13,000₮',
     priceNum: 14000,
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
@@ -55,7 +55,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 2,
     name: 'Чиризо шардаг зайдас',
-    price: '11,500₮',
+    price: '13,000₮',
     priceNum: 11500,
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
@@ -74,7 +74,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 3,
     name: 'Цэвэр гахайн махан зайдас',
-    price: '11,500₮',
+    price: '13,000₮',
     priceNum: 11500,
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
@@ -92,7 +92,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 4,
     name: 'Гахайн утсан мах',
-    price: '15,500₮',
+    price: '28,000₮',
     priceNum: 15500,
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
@@ -111,7 +111,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 5,
     name: 'Ханип',
-    price: '20,000₮',
+    price: '21,800₮',
     priceNum: 20000,
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
@@ -130,7 +130,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 6,
     name: 'Самгёмсал',
-    price: '16,500₮',
+    price: '17,500₮',
     priceNum: 16500,
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
@@ -148,7 +148,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 7,
     name: 'Задгай самгёмсал',
-    price: '17,500₮',
+    price: '16,500₮',
     priceNum: 17500,
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
@@ -167,7 +167,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 8,
     name: 'Гахайн гуяны мах',
-    price: '16,000₮',
+    price: '17,500₮',
     priceNum: 16000,
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
@@ -186,7 +186,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 9,
     name: 'Бугалга',
-    price: '17,500₮',
+    price: '7,500₮',
     priceNum: 17500,
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
@@ -223,7 +223,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 11,
     name: 'Тахианы мөч',
-    price: '7,200₮',
+    price: '7,500₮',
     priceNum: 7200,
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
@@ -241,7 +241,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 12,
     name: 'Тахианы гуяны цул',
-    price: '8,500₮',
+    price: '8,900₮',
     priceNum: 8500,
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
@@ -260,11 +260,11 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 13,
     name: 'Тахианы цээж',
-    price: '7,000₮',
+    price: '7,300₮',
     priceNum: 7000,
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
-    image: '/assets/achmag/product-set-3.5.png',
+    image: '/assets/achmag/product-set-3.1.png',
     imageAlt: 'Тахианы цээжний мах',
     shortDesc: 'Өөх тосгүй, уургаар баялаг тахианы цээжний мах. Эрүүл хоолонд хамгийн тохиромжтой.',
     detailDesc:
@@ -278,7 +278,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 14,
     name: 'Амталсан самгёбсал',
-    price: '18,000₮',
+    price: '19,500₮',
     priceNum: 18000,
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
@@ -334,7 +334,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 17,
     name: 'Моксал',
-    price: '18,000₮',
+    price: '14,000₮',
     priceNum: 18000,
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
@@ -352,7 +352,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 18,
     name: 'Хамбагу',
-    price: '13,500₮',
+    price: '18,100₮',
     priceNum: 13500,
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
@@ -370,7 +370,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 19,
     name: 'Хамбагу мини стейк',
-    price: '12,500₮',
+    price: '18,100₮',
     priceNum: 12500,
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
@@ -388,7 +388,7 @@ const ALL_PRODUCTS: Product[] = [
   {
     id: 20,
     name: 'Мантуутай гахайн мах',
-    price: '18,000₮',
+    price: '17,500₮',
     priceNum: 18000,
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',

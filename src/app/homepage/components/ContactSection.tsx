@@ -87,7 +87,7 @@ export default function ContactSection() {
         </svg>
       ),
       label: 'Утас',
-      value: '7505-0506, 9904-7488',
+      value: '7505-0506, 9907-3583',
       href: 'tel:75050506',
     },
     {
@@ -358,7 +358,7 @@ export default function ContactSection() {
                   </button>
 
                   <p className="text-[11px] text-cream-subtle/60 text-center">
-                    Таны мэдээлэл нууцалж бид таньд ажлын 1–2 өдрийн дотор хариу өгөх болно.
+                    Таны мэдээлэл нууцална. Бид таньд ажлын 1–2 өдрийн дотор хариу өгөх болно.
                   </p>
                 </form>
               )}

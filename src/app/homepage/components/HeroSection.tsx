@@ -232,7 +232,7 @@ export default function HeroSection() {
             {[
               { value: '2014', label: 'Үүсгэн байгуулагдсан' },
               { value: '29+', label: 'Бүтээгдэхүүний нэр төрөл' },
-              { value: '16', label: 'Өөрийн салбар дэлгүүр' },
+              { value: '2', label: 'Өөрийн салбар дэлгүүр' },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-3xl font-bold text-gradient">{stat.value}</div>

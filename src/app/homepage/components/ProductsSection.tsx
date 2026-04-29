@@ -18,6 +18,7 @@ interface Product {
   name: string;
   price: string;
   priceNum: number;
+  weight: string; // ← ADDED
   categoryKey: CategoryKey;
   categoryLabel: string;
   image: string;
@@ -38,6 +39,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Франкфуртер шардаг зайдас',
     price: '13,000₮',
     priceNum: 14000,
+    weight: '450гр', // ← ADDED (fill in your actual weights)
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
     image: '/assets/achmag/product-set-1.1.png',
@@ -45,48 +47,50 @@ const ALL_PRODUCTS: Product[] = [
     badge: 'featured',
     shortDesc: 'Германы уламжлалт жорын дагуу боловсруулсан, шарахад бэлэн нитритгүй зайдас.',
     detailDesc:
-      'Ачмаг Наран ХХК-ийн Франкфуртер зайдас нь Германы уламжлалт жор дагуу, цэвэр гахайн махаар хийгдсэн өндөр чанарын бүтээгдэхүүн юм. Нитрит агуулаагүй тул хэрэглэгчийн эрүүл мэндэд аюулгүй. Тосонд шарахад, буцалгахад болон жигнэхэд аль алинд нь тохиромжтой.',
-    suitableFor: ['Өрхийн хоол', 'Ресторан, кафе', 'Гэр бүлийн зоог', 'Баяр найр'],
+      'Франкфуртер зайдас нь Германы уламжлалт жорын дагуу боловсруулсан, үхэр болон гахайн махаар үйлдвэрлэгдсэн дээд зэргийн чанартай зөөлөн, жигд бүтэцтэй бүтээгдэхүүн юм. Нитрит болон хугацаа уртасгагч агуулаагуй тул эрүүл мэндэд сөрөг нөлөөгүй. Грилдэх болон шарах, жигнэх аргаар болгож хэрэглэхэд тохиромжтой тул өдөр тутмын хэрэглээ болон түргэн хоолны шийдэлд төгс нийцнэ.',
+    suitableFor: ['Өрхийн хэрэглээ', 'Ресторан, кафе', 'Арга хэмжээ'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Зайдас, хиам',
-    origin: 'ОХУ',
-    ingredients: 'Цэвэр гахайн мах, амтлагч, байгалийн амт оруулагч',
+    productType: 'ОХУ',
+    origin: 'Монгол',
+    ingredients: 'Үхэр болон гахайн мах, амтлагч, байгалийн амт оруулагч',
   },
   {
     id: 2,
-    name: 'Чиризо шардаг зайдас',
+    name: 'Чоризо шардаг зайдас',
     price: '13,000₮',
     priceNum: 11500,
+    weight: '450гр',
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
     image: '/assets/achmag/product-set-1.2.png',
-    imageAlt: 'Чиризо шардаг зайдас',
+    imageAlt: 'Чоризо шардаг зайдас',
     badge: 'popular',
     shortDesc: 'Паприка болон байгалийн амтлагчаар боловсруулсан, тогтмол эрэлттэй зайдас.',
     detailDesc:
-      'Испанийн чиризо жортой, Монгол хэрэглэгчдэд тохируулж бэлтгэн амталсан зайдас. Паприка болон байгалийн ногооны амтлагчаар боловсруулсан бөгөөд шарахад улаан өнгийн гоё харагддаг.',
-    suitableFor: ['Өрхийн хоол', 'Пицца, бутерброд', 'Ресторан хоол'],
+      'Испанийн уламжлалт чоризо жорыг суурь болгон, Монгол хэрэглэгчдийн амтанд нийцүүлэн тусгайлан амталж боловсруулсан зайдас юм. Паприка болон байгалийн гаралтай ногооны амтлагчтай хослуулсан халуун ногооны зөөлөн хурц амт нь онцгой мэдрэмж төрүүлнэ. Шарахад өөрийн улаан өнгийг тод гаргаж, хоолны үзэмжийг нэмэгдүүлдэг давуу талтай. Грилдэх болон тосонд шарах аргаар бэлтгэхэд тохиромжтой тул өдөр тутмын хэрэглээ болон түргэн хоолны шийдэлд төгс нийцнэ.',
+    suitableFor: ['Өрхийн хэрэглээ', 'Ресторан, кафе', 'Арга хэмжээ'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Зайдас, хиам',
-    origin: 'ОХУ',
+    productType: 'ОХУ',
+    origin: 'Монгол',
     ingredients: 'Гахайн мах, паприка, халуун ногоо, байгалийн амтлагч',
   },
   {
     id: 3,
-    name: 'Цэвэр гахайн махан зайдас',
+    name: 'Гахайн махан зайдас',
     price: '13,000₮',
     priceNum: 11500,
+    weight: '450гр',
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
     image: '/assets/achmag/product-set-1.3.png',
-    imageAlt: 'Цэвэр гахайн махан зайдас',
+    imageAlt: 'Гахайн махан зайдас',
     shortDesc: 'Хиймэл нэмэлтгүй, цэвэр гахайн махаар хийсэн байгалийн амттай зайдас.',
     detailDesc:
-      'Ямар нэгэн хиймэл нэмэлт, нитрит агуулаагүй, зөвхөн цэвэр гахайн мах болон байгалийн амтлагчаар хийсэн зайдас. Байгалийн цэвэр гарал үүслийг эрхэмлэдэг хэрэглэгчдэд болон хүүхдийн хоолонд тохиромжтой.',
+      'Нитрит болон химийн нэмэлт бодис агуулаагүй, зөвхөн цэвэр гахайн мах, байгалийн гаралтай амтлагчаар боловсруулсан зайдас. Байгалийн цэвэр бүтээгдэхүүнийг эрхэмлэдэг хэрэглэгчдэд тохиромжтой бөгөөд зөөлөн амт, энгийн орц нь өдөр тутмын хэрэглээ, тэр дундаа хүүхэд хэрэглэхэд тохиромжтой. Грилдэх болон тосонд шарах аргаар бэлтгэхэд тохиромжтой тул өдөр тутмын хэрэглээ болон түргэн хоолны шийдэлд төгс нийцнэ.',
     suitableFor: ['Өрхийн хоол', 'Хүүхдийн хоол', 'Өдөр тутмын хэрэглээ'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Зайдас, хиам',
-    origin: 'ОХУ',
+    productType: 'ОХУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр гахайн мах, давс, байгалийн амтлагч',
   },
   {
@@ -94,6 +98,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Гахайн утсан мах',
     price: '28,000₮',
     priceNum: 15500,
+    weight: '450гр',
     categoryKey: 'sausage',
     categoryLabel: 'Зайдас, хиам',
     image: '/assets/achmag/product-set-1.4.png',
@@ -101,11 +106,11 @@ const ALL_PRODUCTS: Product[] = [
     badge: 'business',
     shortDesc: 'Утаж боловсруулсан, шууд хэрэглэх болон хоолонд ашиглахад тохиромжтой бүтээгдэхүүн.',
     detailDesc:
-      'Гахайн утсан мах нь утаж боловсруулсан тул үнэр, амт сайтай. Өглөөний цай, зууш, төрөл бүрийн хоолонд нэмэлтээр хэрэглэхэд тохиромжтой.',
+      'Алимны модны утаагаар утсан, байгалийн жимслэг үнэртэй гахайн мах. Өглөөний цай, BBQ болон өдөр тутмын хоолонд тохиромжтой, гэр бүлийн бүх гишүүдэд зориулагдсан.',
     suitableFor: ['Өдөр тутмын хэрэглээ', 'Зууш', 'Ресторан, кафе'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Зайдас, хиам',
-    origin: 'ОХУ',
+    productType: 'ОХУ',
+    origin: 'Монгол',
     ingredients: 'Гахайн мах, утлагын амт оруулагч, давс, амтлагч',
   },
   {
@@ -113,6 +118,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Ханип',
     price: '21,800₮',
     priceNum: 20000,
+    weight: '1.2кг',
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
     image: '/assets/achmag/product-set-2.1.png',
@@ -120,36 +126,38 @@ const ALL_PRODUCTS: Product[] = [
     badge: 'business',
     shortDesc: 'Мэргэжлийн боловсруулалттай, нийтийн хоол болон бизнесийн хэрэгцээнд тохиромжтой.',
     detailDesc:
-      'Ханип бол нийтийн хоол болон байгууллагын хэрэгцээнд өргөн хэрэглэгддэг, хэд хэдэн шатаар чанарын хяналттайгаар боловсруулсан гахайн мах. Буцалгах, шарах, жигнэх аль ч аргад тохиромжтой. Ресторан, зочид буудал, хоолны үйлдвэрт тогтмол нийлүүлдэг.',
-    suitableFor: ['Ресторан, кафе', 'Зочид буудал', 'Том хэмжээний захиалга'],
+      '  Гахайн хуйхгүй цоройн махаар бэлтгэсэн, урьдчилан цэвэрлэж жигд зүсэлттэй тул шууд хэрэглэхэд бэлэн, цаг хэмнэх хялбар шийдэл. Чанарын хяналтын дор боловсруулсан учир зөөлөн бүтэц, тогтвортой амттай. Өдөр тутмын хоол болон аялал зугаалгад тохиромжтой бөгөөд шарах, хуурах, жигнэх, гриллдэх зэрэгт ашиглах боломжтой.',
+    suitableFor: ['Ресторан, кафе', 'Зочид буудал', 'Том хэмжээний захиалга', 'Аялал зугаалга'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Гахайн мах',
-    origin: 'ОХУ',
-    ingredients: 'Цэвэр гахайн мах',
+    productType: 'ОХУ',
+    origin: 'Монгол',
+    ingredients: 'Гахайн хуйхгуй цоройн мах',
   },
   {
     id: 6,
     name: 'Самгёмсал',
     price: '17,500₮',
     priceNum: 16500,
+    weight: '450г',
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
     image: '/assets/achmag/product-set-2.2.png',
     imageAlt: 'Самгёмсал',
     shortDesc: 'Хэрэглэгч өөрийн жорын дагуу амтлаж болох цэвэр гахайн хэвлийн мах.',
     detailDesc:
-      'Амтлалт нэмэлтгүй, цэвэр гахайн хэвлийн мах бөгөөд хэрэглэгч өөрийн дуртай жорын дагуу боловсруулах боломжтой. Тосны давхарга тэнцвэртэй байгаа тул шарахад гоё, шүүслэг болдог.',
-    suitableFor: ['Гэр бүлийн хоол', 'BBQ, шарсан хоол', 'Өөрийн жор туршихад'],
+      ' Нэмэлт амталгаагүй, цэвэр гахайн цоройн мах бөгөөд хэрэглэгч өөрийн дуртай жор, амталгааны дагуу чөлөөтэй боловсруулж, өдөр тутмын хоол болон шарж хэрэглэхэд тохиромжтой. Өөх, махны давхарга тэнцвэртэй тул шарахад гадна талаараа шаржигнасан, дотроо шүүслэг, зөөлөн бүтэцтэй болдог. Байгалийн цэвэр амт, чанарыг хадгалсан тул гэрийн хоол болон зочин дайлахад ч тохиромжтой, найдвартай сонголт юм.',
+    suitableFor: ['Гэр бүлийн хоол', 'BBQ, шарсан хоол', 'Өөрийн жор туршихад', 'Аялал зугаалга'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Гахайн мах',
-    origin: 'ОХУ',
-    ingredients: 'Цэвэр гахайн мах',
+    productType: 'ОХУ',
+    origin: 'Монгол',
+    ingredients: 'Гахайн цоройн мах',
   },
   {
     id: 7,
     name: 'Задгай самгёмсал',
     price: '16,500₮',
     priceNum: 17500,
+    weight: '450гр',
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
     image: '/assets/achmag/product-set-2.3.png',
@@ -157,11 +165,11 @@ const ALL_PRODUCTS: Product[] = [
     badge: 'business',
     shortDesc: 'Албан байгууллага, худалдааны төвүүдэд худалдан авахад тохиромжтой задгай бүтээгдэхүүн.',
     detailDesc:
-      'Албан байгууллага, худалдааны төвүүдэд худалдан авахад тохиромжтой. Задгай самгёмсал нь их хэмжээгээр нийлүүлэхэд тохиромжтой бөгөөд шарж, жигнэж хэрэглэхэд амт, чанараа сайн хадгалдаг.',
+      ' Нэмэлт амталгаагүй, цэвэр гахайн цоройн мах бөгөөд хэрэглэгч өөрийн дуртай жор, амталгааны дагуу чөлөөтэй боловсруулж, өдөр тутмын хоол болон шарж хэрэглэхэд тохиромжтой. Өөх, махны давхарга тэнцвэртэй тул шарахад гадна талаараа шаржигнасан, дотроо шүүслэг, зөөлөн бүтэцтэй болдог. Байгалийн цэвэр амт, чанарыг хадгалсан тул гэрийн хоол болон зочин дайлахад ч тохиромжтой, найдвартай сонголт юм./Байгууллага болон хувь хүн их савалгаагүй их хэмжээгээр авахад тохиромжтой/',
     suitableFor: ['Албан байгууллага', 'Худалдааны төв', 'Том хэмжээний захиалга'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Гахайн мах',
-    origin: 'ОХУ',
+    productType: 'ОХУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр гахайн мах',
   },
   {
@@ -169,6 +177,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Гахайн гуяны мах',
     price: '17,500₮',
     priceNum: 16000,
+    weight: '450гр',
     categoryKey: 'pork',
     categoryLabel: 'Гахайн мах',
     image: '/assets/achmag/product-set-2.4.png',
@@ -179,8 +188,8 @@ const ALL_PRODUCTS: Product[] = [
       'Тослог багатай, өдөр тутмын хоолонд тохиромжтой. Ресторан, албан байгууллага болон гэр бүлийн хэрэглээнд нийцсэн, шарах, чанах, жигнэхэд тохиромжтой мах.',
     suitableFor: ['Ресторан', 'Албан байгууллага', 'Гэр бүлийн хоол'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Гахайн мах',
-    origin: 'ОХУ / БНХАУ',
+    productType: 'ОХУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр гахайн мах',
   },
   {
@@ -188,6 +197,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Бугалга',
     price: '7,500₮',
     priceNum: 17500,
+    weight: '450г',
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
     image: '/assets/achmag/product-set-3.1.png',
@@ -195,11 +205,11 @@ const ALL_PRODUCTS: Product[] = [
     badge: 'family',
     shortDesc: 'Шарах, чанах аргаар болгоход тохиромжтой, хүүхдэд илүү тохиромжтой тахианы мах.',
     detailDesc:
-      'Тахианы бугалга нь шарах, чанах аргаар болгодог бөгөөд зөөлөн бүтэцтэй тул хүүхдэд илүү тохиромжтой. Өдөр тутмын хоол болон гэр бүлийн хэрэглээнд тохиромжтой.',
+      'Тахианы бугалга нь өөх, махны тэнцвэртэй бүтэцтэй тул шүүслэг, амтлаг бөгөөд шарах, жигнэх зэрэг бүх төрлийн хоолонд тохиромжтой, өргөн хэрэглээний мах юм. Мөн амьтныг хүмүүнлэг аргаар нядалж бэлтгэсэн, органик, антибиотикгүй түүхий эдээр үйлдвэрлэгдсэн тул хэрэглэгчдэд илүү аюулгүй, чанартай сонголт юм.',
     suitableFor: ['Өрхийн хоол', 'Хүүхдийн хоол', 'Шарах, чанах хоол'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Тахианы мах',
-    origin: 'БНХАУ',
+    productType: 'БНХАУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр тахианы мах',
   },
   {
@@ -207,6 +217,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Тахианы гуя',
     price: '7,500₮',
     priceNum: 7500,
+    weight: '500г',
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
     image: '/assets/achmag/product-set-3.2.png',
@@ -216,8 +227,8 @@ const ALL_PRODUCTS: Product[] = [
       'Цэвэр боловсруулсан, антибиотикгүй тахиа. Тахианы гуя нь шарах, чанах, жигнэх аль аргад тохиромжтой бөгөөд өдөр тутмын хоолонд өргөн хэрэглэгддэг.',
     suitableFor: ['Өдөр тутмын хоол', 'Хүүхдийн хоол', 'Том хэмжээний захиалга'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Тахианы мах',
-    origin: 'БНХАУ',
+    productType: 'БНХАУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр тахианы мах',
   },
   {
@@ -225,6 +236,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Тахианы мөч',
     price: '7,500₮',
     priceNum: 7200,
+    weight: '500г',
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
     image: '/assets/achmag/product-set-3.3.png',
@@ -234,8 +246,8 @@ const ALL_PRODUCTS: Product[] = [
       'Гэр бүл, ресторан, албан байгууллагад тохиромжтой. Хэрэглэхэд хялбар, антибиотикгүй тахианы мөч нь шарах, чанах, жигнэхэд тохиромжтой.',
     suitableFor: ['Гэр бүл', 'Ресторан', 'Албан байгууллага'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Тахианы мах',
-    origin: 'БНХАУ',
+    productType: 'БНХАУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр тахианы мах',
   },
   {
@@ -243,6 +255,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Тахианы гуяны цул',
     price: '8,900₮',
     priceNum: 8500,
+    weight: '500г',
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
     image: '/assets/achmag/product-set-3.4.png',
@@ -253,8 +266,8 @@ const ALL_PRODUCTS: Product[] = [
       'Гэр бүлийн болон албан байгууллагын хэрэгцээнд тохиромжтой. Ясгүй тул шарах, жигнэх, чанахад хялбар бөгөөд олон төрлийн хоолонд ашиглаж болно.',
     suitableFor: ['Гэр бүлийн хоол', 'Албан байгууллага', 'Том хэмжээний захиалга'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Тахианы мах',
-    origin: 'БНХАУ',
+    productType: 'БНХАУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр тахианы мах',
   },
   {
@@ -262,6 +275,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Тахианы цээж',
     price: '7,300₮',
     priceNum: 7000,
+    weight: '500г',
     categoryKey: 'chicken',
     categoryLabel: 'Тахианы мах',
     image: '/assets/achmag/product-set-3.1.png',
@@ -271,8 +285,8 @@ const ALL_PRODUCTS: Product[] = [
       'Өөх тосгүй, уургаар баялаг тахианы цээжний мах нь эрүүл хоолны дэглэм баримталдаг хэрэглэгчдэд хамгийн тохиромжтой. Спорт хооллолт, диет хоол болон өдөр тутмын хоолонд өргөн хэрэглэгддэг.',
     suitableFor: ['Эрүүл хооллолт', 'Спорт хооллолт', 'Хурдан хоол'],
     storageNote: '0–18°C-д хадгална.',
-    productType: 'Тахианы мах',
-    origin: 'БНХАУ',
+    productType: 'БНХАУ',
+    origin: 'Монгол',
     ingredients: 'Цэвэр тахианы мах',
   },
   {
@@ -280,6 +294,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Амталсан самгёбсал',
     price: '19,500₮',
     priceNum: 18000,
+    weight: '500г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.1.png',
@@ -299,6 +314,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Жэюүг',
     price: '15,000₮',
     priceNum: 15000,
+    weight: '500г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.2.png',
@@ -317,6 +333,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Стейк (гахайн мах)',
     price: '14,500₮',
     priceNum: 14500,
+    weight: '300г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.3.png',
@@ -336,6 +353,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Моксал',
     price: '14,000₮',
     priceNum: 18000,
+    weight: '500г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.4.png',
@@ -354,6 +372,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Хамбагу',
     price: '18,100₮',
     priceNum: 13500,
+    weight: '400г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.5.png',
@@ -372,6 +391,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Хамбагу мини стейк',
     price: '18,100₮',
     priceNum: 12500,
+    weight: '250г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.6.png',
@@ -390,6 +410,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Мантуутай гахайн мах',
     price: '17,500₮',
     priceNum: 18000,
+    weight: '500г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.7.png',
@@ -409,6 +430,7 @@ const ALL_PRODUCTS: Product[] = [
     name: 'Тахиан амталсан мах',
     price: '12,500₮',
     priceNum: 12500,
+    weight: '500г',
     categoryKey: 'special',
     categoryLabel: 'Амталсан тусгай бүтээгдэхүүн',
     image: '/assets/achmag/product-set-4.8.png',
@@ -536,10 +558,7 @@ export default function ProductsSection() {
           </div>
 
           {visible.length === 0 ? (
-            <div
-              className="flex flex-col items-center justify-center py-20 text-center"
-              role="status"
-            >
+            <div className="flex flex-col items-center justify-center py-20 text-center" role="status">
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center mb-5"
                 style={{ backgroundColor: 'rgba(200,75,17,0.08)', border: '1px solid rgba(200,75,17,0.18)' }}
@@ -602,7 +621,7 @@ export default function ProductsSection() {
                     <div className="p-4 flex flex-col gap-3">
                       <div>
                         <h3 className="font-display font-semibold text-cream text-[15px] leading-tight mb-1">
-                          {product.name}
+                          {product.name} <span className="text-cream-muted opacity-60">\ {product.weight}</span>
                         </h3>
                         <p className="text-[12px] text-cream-subtle line-clamp-2 leading-relaxed">
                           {product.shortDesc}
@@ -613,9 +632,15 @@ export default function ProductsSection() {
                         className="flex items-center justify-between pt-2"
                         style={{ borderTop: '1px solid rgba(250,240,230,0.06)' }}
                       >
-                        <span className="font-display font-bold text-primary-light text-lg">
-                          {product.price}
-                        </span>
+                        {/* ← CHANGED: price + weight stacked */}
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-display font-bold text-primary-light text-lg">
+                            {product.price}
+                          </span>
+                          <span className="text-[11px] text-cream-muted opacity-60">
+                            {product.weight}
+                          </span>
+                        </div>
                         <button
                           onClick={() => setSelected(product)}
                           className="px-3 py-1.5 text-[12px] font-semibold text-cream border rounded-sm hover:bg-primary/10 hover:border-primary/50 transition-all duration-200"
@@ -660,78 +685,69 @@ export default function ProductsSection() {
             style={{ backgroundColor: '#1E0D06', borderColor: 'rgba(200,75,17,0.3)' }}
             onClick={(e) => e.stopPropagation()}
           >
-          <div
-  className="relative h-[360px] md:h-[460px] overflow-hidden flex items-center justify-center"
-  style={{ backgroundColor: '#241109' }}
->
-  {/* blurred background from same image */}
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    <img
-      src={selected.image}
-      alt={selected.imageAlt}
-      className="w-full h-full object-cover scale-110"
-      style={{
-        filter: 'blur(22px)',
-        opacity: 0.35,
-        transform: 'scale(1.12)',
-      }}
-    />
-    <div
-      className="absolute inset-0"
-      style={{
-        background: `
-          linear-gradient(to bottom, rgba(30,13,6,0.48), rgba(30,13,6,0.18) 24%, rgba(30,13,6,0.18) 76%, rgba(30,13,6,0.58)),
-          linear-gradient(to right, rgba(30,13,6,0.52), rgba(30,13,6,0.08) 18%, rgba(30,13,6,0.08) 82%, rgba(30,13,6,0.52))
-        `,
-      }}
-    />
-  </div>
+            <div
+              className="relative h-[360px] md:h-[460px] overflow-hidden flex items-center justify-center"
+              style={{ backgroundColor: '#241109' }}
+            >
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img
+                  src={selected.image}
+                  alt={selected.imageAlt}
+                  className="w-full h-full object-cover scale-110"
+                  style={{ filter: 'blur(22px)', opacity: 0.35, transform: 'scale(1.12)' }}
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: `
+                      linear-gradient(to bottom, rgba(30,13,6,0.48), rgba(30,13,6,0.18) 24%, rgba(30,13,6,0.18) 76%, rgba(30,13,6,0.58)),
+                      linear-gradient(to right, rgba(30,13,6,0.52), rgba(30,13,6,0.08) 18%, rgba(30,13,6,0.08) 82%, rgba(30,13,6,0.52))
+                    `,
+                  }}
+                />
+              </div>
 
-  {/* main full product image */}
-  <div className="relative z-10 w-full h-full flex items-center justify-center px-6 md:px-10 py-6 md:py-8">
-    <img
-      src={selected.image}
-      alt={selected.imageAlt}
-      className="max-w-full max-h-full object-contain block"
-      style={{
-        width: 'auto',
-        height: 'auto',
-      }}
-    />
-  </div>
+              <div className="relative z-10 w-full h-full flex items-center justify-center px-6 md:px-10 py-6 md:py-8">
+                <img
+                  src={selected.image}
+                  alt={selected.imageAlt}
+                  className="max-w-full max-h-full object-contain block"
+                  style={{ width: 'auto', height: 'auto' }}
+                />
+              </div>
 
-  {/* subtle bottom fade */}
-  <div
-    className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
-    style={{
-      background: 'linear-gradient(to top, rgba(30,13,6,0.92), rgba(30,13,6,0))',
-    }}
-  />
+              <div
+                className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
+                style={{ background: 'linear-gradient(to top, rgba(30,13,6,0.92), rgba(30,13,6,0))' }}
+              />
 
-  <button
-    onClick={() => setSelected(null)}
-    className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-sm border text-cream hover:text-white transition-colors"
-    style={{ backgroundColor: 'rgba(26,10,4,0.7)', borderColor: 'rgba(200,75,17,0.3)' }}
-    aria-label="Хаах"
-  >
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  </button>
+              <button
+                onClick={() => setSelected(null)}
+                className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-sm border text-cream hover:text-white transition-colors"
+                style={{ backgroundColor: 'rgba(26,10,4,0.7)', borderColor: 'rgba(200,75,17,0.3)' }}
+                aria-label="Хаах"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
 
-  {selected.badge && (
-    <div className={`absolute top-4 left-4 z-20 px-2.5 py-1 rounded-sm text-[10px] font-bold text-white ${BADGE_STYLE[selected.badge]}`}>
-      {BADGE_LABEL[selected.badge]}
-    </div>
-  )}
-</div>
+              {selected.badge && (
+                <div className={`absolute top-4 left-4 z-20 px-2.5 py-1 rounded-sm text-[10px] font-bold text-white ${BADGE_STYLE[selected.badge]}`}>
+                  {BADGE_LABEL[selected.badge]}
+                </div>
+              )}
+            </div>
 
             <div className="p-6 md:p-8">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-cream mb-1">{selected.name}</h2>
-                  <div className="flex items-center gap-3">
+                  <h2 className="font-display text-2xl font-bold text-cream mb-1">
+                    {selected.name} <span className="text-[16px] text-cream-muted opacity-60">\ {selected.weight}</span>
+                  </h2>
+                  {/* ← CHANGED: weight inline next to price */}
+                  <div className="flex items-baseline gap-2">
                     <span className="font-display text-2xl font-bold text-primary-light">
                       {selected.price}
                     </span>
@@ -745,7 +761,7 @@ export default function ProductsSection() {
                   style={{ backgroundColor: 'rgba(212,168,83,0.07)', border: '1px solid rgba(212,168,83,0.2)' }}
                 >
                   <span className="text-[11px] text-accent font-semibold tracking-wide uppercase">
-                    Бүтээгдэхүүний төрөл:
+                    Түүхий эдийн гарал үүсэл:
                   </span>{' '}
                   <span className="text-[13px] text-cream-muted">{selected.productType}</span>
                 </div>
@@ -754,7 +770,7 @@ export default function ProductsSection() {
                   style={{ backgroundColor: 'rgba(212,168,83,0.07)', border: '1px solid rgba(212,168,83,0.2)' }}
                 >
                   <span className="text-[11px] text-accent font-semibold tracking-wide uppercase">
-                    Гарал үүсэл:
+                    Үйлдвэрлсэн газар:
                   </span>{' '}
                   <span className="text-[13px] text-cream-muted">{selected.origin}</span>
                 </div>

@@ -41,7 +41,7 @@ export default function HeroSection() {
       if (isTransitioning || index === currentSlide) return;
       setIsTransitioning(true);
       setCurrentSlide(index);
-      setTimeout(() => setIsTransitioning(false), 900);
+      setTimeout(() => setIsTransitioning(false), 2000);
     },
     [isTransitioning, currentSlide]
   );
@@ -51,8 +51,8 @@ export default function HeroSection() {
     intervalRef.current = setInterval(() => {
       setIsTransitioning(true);
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      setTimeout(() => setIsTransitioning(false), 900);
-    }, 5500);
+      setTimeout(() => setIsTransitioning(false), 2000);
+    }, 7500);
   }, []);
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export default function HeroSection() {
           className="absolute inset-0 z-0"
           style={{
             opacity: i === currentSlide ? 1 : 0,
-            transition: 'opacity 1s cubic-bezier(0.4,0,0.2,1)',
+            transition: 'opacity 2s ease-in-out',
           }}
         >
           <AppImage
@@ -232,7 +232,7 @@ export default function HeroSection() {
             {[
               { value: '2014', label: 'Үүсгэн байгуулагдсан' },
               { value: '29+', label: 'Бүтээгдэхүүний нэр төрөл' },
-              { value: '2', label: 'Өөрийн салбар дэлгүүр' },
+              { value: '4', label: 'Нэрийн дэлгүүр' },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-3xl font-bold text-gradient">{stat.value}</div>
@@ -262,7 +262,7 @@ export default function HeroSection() {
             }}
           >
             {i === currentSlide && (
-              <span className="slide-progress-bar" style={{ animationDuration: '5.5s' }} />
+              <span className="slide-progress-bar" style={{ animationDuration: '7.5s' }} />
             )}
           </button>
         ))}

@@ -213,7 +213,7 @@ export default function TrustSection() {
               <div className="relative">
                 <div className="aspect-[4/5] rounded-sm overflow-hidden">
                   <AppImage
-                    src="/assets/achmag/quality-factory.png"
+                    src="/assets/achmag/quality-factory.jpg"
                     alt="Ачмаг Наран ХХК — чанарт үйлдвэр"
                     fill
                     className="object-cover"

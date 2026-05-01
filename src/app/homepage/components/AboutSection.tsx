@@ -60,7 +60,7 @@ export default function AboutSection() {
           <div className="relative scroll-reveal">
             <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
               <AppImage
-                src="/assets/achmag/about-factory.png"
+                src="/assets/achmag/about-factory.jpg"
                 alt="Ачмаг Наран ХХК үйлдвэр"
                 fill
                 className="object-cover"

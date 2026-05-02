@@ -5,9 +5,9 @@ import React, { useEffect, useRef, useState } from 'react';
 type FormState = { name: string; phone: string; message: string };
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-const EMAILJS_SERVICE_ID = 'service_obum1ml';
-const EMAILJS_TEMPLATE_ID = 'template_1jazuod';
-const EMAILJS_PUBLIC_KEY = 'gHA-jWH5ADQaXNmRA';
+const EMAILJS_SERVICE_ID = 'service_u9x4ts5';
+const EMAILJS_TEMPLATE_ID = 'template_jbxo05j';
+const EMAILJS_PUBLIC_KEY = 'dribrcSDmLW29s0hY';
 
 function validate(f: FormState): string | null {
   if (!f.name.trim()) return 'Нэрээ оруулна уу.';

@@ -52,7 +52,7 @@ export default function HeroSection() {
       setIsTransitioning(true);
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       setTimeout(() => setIsTransitioning(false), 2000);
-    }, 15000); // <-- CHANGED HERE: from 7500 to 15000 (15 seconds)
+    }, 12000); // <-- CHANGED HERE: from 7500 to 15000 (15 seconds)
   }, []);
 
   useEffect(() => {
@@ -261,7 +261,7 @@ export default function HeroSection() {
             }}
           >
             {i === currentSlide && (
-              <span className="slide-progress-bar" style={{ animationDuration: '15s' }} /> // <-- CHANGED HERE: from 7.5s to 15s
+              <span className="slide-progress-bar" style={{ animationDuration: '12s' }} /> // <-- CHANGED HERE: from 7.5s to 15s
             )}
           </button>
         ))}

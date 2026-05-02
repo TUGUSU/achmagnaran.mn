@@ -3,21 +3,21 @@
 import React, { useState } from 'react';
 
 const partners = [
-  { name: 'Номин холдинг',              logo: 'nomin' },
-  { name: 'Оргил сүлжээ',               logo: 'orgil' },
-  { name: 'Сансар сүлжээ',              logo: 'sansar' },
-  { name: 'Emart',                      logo: 'emart' },
-  { name: 'Хаанбууз ХХК',               logo: 'khaanbuuz' },
-  { name: 'Монбэйкери ХХК',             logo: 'monbakery' },
-  { name: 'Номадс хоспиталити',         logo: 'nomads' },
-  { name: 'Нордлайн ХХК',               logo: 'nordline' },
-  { name: 'Алтан Жолоо Трейд',          logo: 'altanjoloot' },
-  { name: 'Моннидер ХХК',               logo: 'monnider' },
+  { name: 'Номин холдинг',      logo: 'nomin' },
+  { name: 'Оргил сүлжээ',       logo: 'orgil' },
+  { name: 'Сансар сүлжээ',      logo: 'sansar' },
+  { name: 'Emart',              logo: 'emart' },
+  { name: 'Хаанбууз ХХК',       logo: 'khaanbuuz' },
+  { name: 'Монбэйкери ХХК',     logo: 'monbakery' },
+  { name: 'Номадс хоспиталити', logo: 'nomads' },
+  { name: 'Нордлайн ХХК',       logo: 'nordline' },
+  { name: 'Алтан Жолоо Трейд',  logo: 'altanjoloot' },
+  { name: 'Моннидер ХХК',       logo: 'monnider' },
   { name: 'Хархорин худалдааны төв',    logo: null },
   { name: 'Дүнжингарав худалдааны төв', logo: null },
-  { name: 'Баялаг Ундраа',              logo: 'bayalag-undraa' },
+  { name: 'Баялаг Ундраа',      logo: 'bayalag-undraa' },
   { name: 'Нарантуул худалдааны төв',   logo: null },
-  { name: 'Хүчит Шонхор',               logo: null },
+  { name: 'Хүчит Шонхор',       logo: null },
 ];
 
 const tripled = [...partners, ...partners, ...partners];
@@ -93,7 +93,10 @@ export default function PartnersSection() {
           <div className="overflow-hidden">
             <div
               className="partner-marquee flex items-center"
-              style={{ width: 'max-content' }}
+              style={{ 
+                width: 'max-content',
+                animationDuration: '100s' 
+              }}
             >
               {tripled.map((p, i) => {
                 const itemKey = getKey(p.name, p.logo);
@@ -122,31 +125,33 @@ export default function PartnersSection() {
                       <div
                         className="flex items-center justify-center"
                         style={{
-                          width: 110,
-                          height: 44,
+                          width: 140, // Increased from 110
+                          height: 56, // Increased from 44
                         }}
                       >
                         {hasLogo ? (
                           <img
                             src={`/assets/partners/${p.logo}.png`}
                             alt={p.name}
-                            width={110}
-                            height={44}
+                            width={140}  // Increased from 110
+                            height={56}  // Increased from 44
                             className="object-contain"
                             style={{
                               width: 'auto',
                               height: 'auto',
-                              maxWidth: '110px',
-                              maxHeight: '44px',
+                              maxWidth: '140px', // Increased from 110px
+                              maxHeight: '56px', // Increased from 44px
                               display: 'block',
                               background: 'transparent',
                               border: 'none',
                               outline: 'none',
+                              // Changed filter to always be colorful and bright
                               filter: isHighlighted
-                                ? 'grayscale(0) brightness(1.08)'
-                                : 'grayscale(1) brightness(0.78)',
-                              opacity: isHighlighted ? 1 : 0.9,
-                              transition: 'filter 0.25s ease, opacity 0.25s ease',
+                                ? 'grayscale(0) brightness(1.15)' // slightly brighter on hover
+                                : 'grayscale(0) brightness(1)',   // normal bright color
+                              opacity: 1, // Always fully visible
+                              transition: 'filter 0.25s ease, transform 0.25s ease',
+                              transform: isHighlighted ? 'scale(1.05)' : 'scale(1)', // Slight pop effect on hover
                             }}
                             onError={() => {
                               setBrokenLogos((prev) => ({ ...prev, [itemKey]: true }));
@@ -156,48 +161,46 @@ export default function PartnersSection() {
                           <span
                             style={{
                               color: isHighlighted
-                                ? 'rgba(235,205,140,0.95)'
-                                : 'rgba(220,198,170,0.82)',
-                              fontSize: '12px',
+                                ? 'rgba(235,205,140,1)'
+                                : 'rgba(235,205,140,0.9)', // Made text slightly brighter by default too
+                              fontSize: '13px', // Increased font size slightly
                               fontWeight: 500,
                               lineHeight: 1.35,
                               textAlign: 'center',
                               transition: 'color 0.25s ease',
-                              maxWidth: 110,
+                              maxWidth: 140, // Match new width
                             }}
                           >
                             {p.name}
                           </span>
                         )}
                       </div>
-
                       {hasLogo && (
                         <span
                           className="mt-3"
                           style={{
                             color: isHighlighted
-                              ? 'rgba(235,205,140,0.95)'
-                              : 'rgba(220,198,170,0.82)',
-                            fontSize: '12px',
+                              ? 'rgba(235,205,140,1)'
+                              : 'rgba(235,205,140,0.9)', // Match the brighter text default
+                            fontSize: '13px', // Increased slightly
                             fontWeight: 500,
                             lineHeight: 1.35,
                             textAlign: 'center',
                             transition: 'color 0.25s ease',
-                            maxWidth: 140,
+                            maxWidth: 160, // Increased slightly
                           }}
                         >
                           {p.name}
                         </span>
                       )}
                     </button>
-
                     <span
                       className="flex-shrink-0"
                       style={{
                         display: 'block',
                         width: 1,
-                        height: 20,
-                        backgroundColor: 'rgba(200,75,17,0.12)',
+                        height: 24, // Increased separator height slightly to match larger logos
+                        backgroundColor: 'rgba(200,75,17,0.15)', // slightly more visible
                         marginLeft: 20,
                       }}
                     />

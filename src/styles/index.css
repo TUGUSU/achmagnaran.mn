@@ -319,7 +319,7 @@ body {
 
 .partner-marquee {
   /* pointer-events:none on the track means hover/click can never pause it */
-  animation: marqueeScroll 76s linear infinite;
+  animation: marqueeScroll 90s linear infinite;
   will-change: transform;
 }
 

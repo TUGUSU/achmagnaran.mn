@@ -52,7 +52,7 @@ export default function HeroSection() {
       setIsTransitioning(true);
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       setTimeout(() => setIsTransitioning(false), 2000);
-    }, 7500);
+    }, 15000); // <-- CHANGED HERE: from 7500 to 15000 (15 seconds)
   }, []);
 
   useEffect(() => {
@@ -149,7 +149,6 @@ export default function HeroSection() {
       {/* Content — re-animates on slide change via key */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full">
         <div className="max-w-3xl">
-
           {/* Eyebrow */}
           <div
             key={`eyebrow-${currentSlide}`}
@@ -262,7 +261,7 @@ export default function HeroSection() {
             }}
           >
             {i === currentSlide && (
-              <span className="slide-progress-bar" style={{ animationDuration: '7.5s' }} />
+              <span className="slide-progress-bar" style={{ animationDuration: '15s' }} /> // <-- CHANGED HERE: from 7.5s to 15s
             )}
           </button>
         ))}
